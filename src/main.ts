@@ -22,7 +22,7 @@ load().then(mapgl => {
   });
 
   new ShareControl(map, {
-    urlMaker: (center, zoom, rotation, pitch) => `${self.origin}?m=${encodeURIComponent(`${center.toString()}/${zoom}/p/${pitch}/r/${rotation}`)}`,
+    urlMaker: (center, zoom, rotation, pitch) => `${self.origin}${location.pathname}?m=${encodeURIComponent(`${center.toString()}/${zoom}/p/${pitch}/r/${rotation}`)}`,
     mapCodeMaker: (center, zoom, rotation, pitch) => {
       const id =`map-${Math.trunc(Math.random() * 10**9)}`;      
       return `<div id="${id}" style="width:540px;height:340px;"></div>
