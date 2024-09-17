@@ -49,7 +49,7 @@ export class ShareControl {
             return;
         }
     
-        buttonEl.addEventListener('click', (ev) => {
+        buttonEl.addEventListener('click', () => {
             this.showPopup();
             this.updateFields();
             this.updatePreview();
