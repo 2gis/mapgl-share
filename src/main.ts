@@ -2,7 +2,7 @@ import { ShareControl } from '.';
 import './style.css';
 import { load } from '@2gis/mapgl';
 
-const MAPGL_JS_API_KEY = 'test';
+const MAPGL_JS_API_KEY = 'a1893935-6834-4445-b97a-3405fb426c5b';
 
 load().then(mapgl => {
   const url = new URL(location.href);
