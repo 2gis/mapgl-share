@@ -1,0 +1,210 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+}
+
+#app, #map, #popup-wrap {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+#popup-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #0008;
+  z-index: 200;
+}
+
+#popup {
+  box-shadow: 0 1px 3px 0 rgba(38, 38, 38, 0.5);
+  border-radius: 4px;
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+#popup .header {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-weight: bolder;
+}
+
+#popup .row {
+  display: flex;
+  align-items: flex-start;
+}
+
+#popup iframe {
+  flex-grow: 1;
+}
+
+#popup textarea {
+  width: 200px;
+  height: 360px;
+  font-size: 10px;
+}
+
+#src {
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border: solid 1px #eee;
+  margin: 8px;
+}
+
+#preview {
+  border: solid 1px #eee;
+  width: 560px;
+  height: 360px;
+}
+
+#mapgl-share-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+}
+
+.mapgl-share-border {
+  box-shadow: 0 1px 3px 0 rgba(38, 38, 38, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+  padding: 0;
+}
+
+.mapgl-share-veil {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapgl-share-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  min-width: 300px;
+}
+
+.mapgl-share-body p {
+  font-size: 12px;
+}
+
+.mapgl-share-body input {
+  display: inline-flex;
+  border-radius: 4px;
+  border: solid 1px #eee;
+  padding: 8px;
+  margin: 8px 0;
+  width: 250px;
+}
+
+.mapgl-share-copy {
+  display: inline-flex;
+  margin-left: -50px;
+  border-radius: 4px;
+}
+
+.mapgl-share-preview {
+  display: inline-flex;
+  padding: 8px;
+  margin-left: 8px;
+  border-radius: 4px;
+  color: white;
+  background-color: rgb(0,178,221);
+}
+
+#mapgl-share-preview-placeholder {
+  border: solid 1px #eee;
+  border-radius: 4px;
+}
+
+.mapgl-share-body h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.mapgl-share-body label {
+  display: flex;
+}
+
+.mapgl-share-closer {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  font-size: 14px;
+  top: 10px;
+  right: 10px;
+  width: 16px;
+  height: 16px;  
+}
+
+.spreader {
+  flex-grow: 1;
+}
+
+button {
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
