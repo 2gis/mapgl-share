@@ -2,16 +2,6 @@
 
 A sharing control for the `@2gis/mapgl` library.
 
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [ShareControlOptions](#sharecontroloptions)
-- [Development](#development)
-- [Build](#build)
-- [Preview](#preview)
-- [License](#license)
-
 ## Installation
 
 To install the dependencies, run:
