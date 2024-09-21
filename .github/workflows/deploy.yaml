@@ -37,10 +37,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - name: Fix deploy path
-        run: npm install
       - name: Build
-        run: npm run build -- --base=/mapgl-share-control/
+        run: npm run build-demo -- --base=/mapgl-share-control/
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build -c ./lib.vite.js && npm run typings",
-    "preview": "vite preview",
+    "build-demo": "tsc && vite build",
     "typings": "tsc -p tsconfig.typings.json --declaration --emitDeclarationOnly --outDir dist",
     "prepublishOnly": "npm run build"
   },
