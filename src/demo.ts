@@ -52,7 +52,7 @@ load().then(mapgl => {
           zoom: ${zoom}, 
           pitch: ${pitch}, 
           rotation: ${rotation},
-          style: ${style},
+          style: ${typeof style === 'string' ? JSON.stringify(style) : style},
           styleState: {
             immersiveRoadsOn: true
           }
