@@ -180,14 +180,14 @@ export class ShareControl {
                 <p style="display: ${urlMaker ? 'block' : 'none'}">
                     <label>${l('%linkLabel%', this.locale)}</label>
                     <input id="${cssPrefix}-url-field" class="${cssPrefix}-input">
-                    <button class="${cssPrefix}-copy" data-action="copy">${l('%copyButton%', this.locale)}</button>
+                    <button id="${cssPrefix}-link-copy" class="${cssPrefix}-copy" data-action="copy">${l('%copyButton%', this.locale)}</button>
                 </p>
 
                 <p style="display: ${mapCodeMaker ? 'block' : 'none'}">
                     <label>${l('%embedLabel%', this.locale)}</label>
                     <input id="${cssPrefix}-code-field" class="${cssPrefix}-input">
-                    <button class="${cssPrefix}-copy" data-action="copy">${l('%copyButton%', this.locale)}</button>
-                    <button class="${cssPrefix}-preview" data-action="preview">${l('%previewButton%', this.locale)}</button>
+                    <button id="${cssPrefix}-embed-copy" class="${cssPrefix}-copy" data-action="copy">${l('%copyButton%', this.locale)}</button>
+                    <button id="${cssPrefix}-preview" data-action="preview">${l('%previewButton%', this.locale)}</button>
                 </p>
 
                 <iframe style="display: none;" width="560" height="360" id="${cssPrefix}-preview-placeholder"></iframe>
