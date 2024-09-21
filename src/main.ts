@@ -2,7 +2,7 @@ import { ShareControl } from '.';
 import './style.css';
 import { load } from '@2gis/mapgl';
 
-const MAPGL_JS_API_KEY = 'a1893935-6834-4445-b97a-3405fb426c5b';
+const MAPGL_JS_API_KEY = 'cb20c5bf-34d3-4f0e-9b2b-33e9b8edb57f';
 
 load().then(mapgl => {
   const url = new URL(location.href);
@@ -16,12 +16,15 @@ load().then(mapgl => {
     zoom: params ? +params[1] : 2, 
     pitch: params ? +params[3] : 0, 
     rotation: params ? +params[5] : 0,
+    loopWorld: true,
+    enableTrackResize: true,
     styleState: {
       immersiveRoadsOn: true
     }
   });
 
   new ShareControl(map, {
+    locale: navigator.language,
     urlMaker: (center, zoom, rotation, pitch) => `${self.origin}${location.pathname}?m=${encodeURIComponent(`${center.toString()}/${zoom}/p/${pitch}/r/${rotation}`)}`,
     mapCodeMaker: (center, zoom, rotation, pitch) => {
       const id =`map-${Math.trunc(Math.random() * 10**9)}`;      

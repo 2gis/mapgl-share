@@ -1,12 +1,16 @@
 {
-  "name": "mkmap",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@2gis/mapgl-share",
+  "version": "0.1.0",
   "type": "module",
+  "main": "dist/mapgl-share.js",
+  "module": "dist/mapgl-share.umd.js",
+  "typings": "dist/src/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build -c ./lib.vite.js && npm run typings",
+    "preview": "vite preview",
+    "typings": "tsc -p tsconfig.typings.json --declaration --emitDeclarationOnly --outDir dist",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@2gis/mapgl": "^1.50.1",
