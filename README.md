@@ -4,10 +4,8 @@ A sharing control for the `@2gis/mapgl` library.
 
 ## Installation
 
-To install the dependencies, run:
-
 ```bash
-npm install
+npm install git+https://github.com/2gis/mapgl-share.git
 ```
 
 ## Usage
